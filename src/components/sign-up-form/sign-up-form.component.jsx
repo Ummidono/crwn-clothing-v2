@@ -33,7 +33,6 @@ const SignUpForm = () =>
 
         try{
             const {user} = await createAuthUserWithEmailAndPassword(email,password);
-            console.log(user)
             await createUserDocFromAuth (user,{displayName});
             resetFormFields();
             
